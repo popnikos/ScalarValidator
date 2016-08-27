@@ -13,13 +13,18 @@ trait TraitRegularExpression
    * Assume that $pattern is a valid PCRE Regular expression
    * @param string $pattern
    */
-  function setPattern($pattern)
+  protected function setPattern($pattern)
   {
     $this->pattern = $pattern;
   }
   
-  function getPattern()
+  protected function getPattern()
   {
     return $this->pattern;
+  }
+  
+  protected function match($value)
+  {
+    return preg_match($this->getPattern(), $value);
   }
 }
