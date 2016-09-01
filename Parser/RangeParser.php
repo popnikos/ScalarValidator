@@ -5,7 +5,7 @@ namespace Popnikos\ScalarValidator\Parser;
 /**
  * @author Nicolas KLEIN <popnikos@gmail.com>
  */
-class RangeParser extends AbstractParser
+class RangeParser implements ParserInterface
 {
     /**
      * Try to evaluate $value as a range expression like this :
