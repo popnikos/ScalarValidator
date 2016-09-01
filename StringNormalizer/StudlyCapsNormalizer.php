@@ -6,7 +6,7 @@ class StudlyCapsNormalizer
 {
     private function purify($string)
     {
-        return preg_replace('[^0-9A-Za-z]+', ' ',$string);
+        return preg_replace('/[^0-9A-Za-z]+/', ' ',$string);
     }
 
     private function split($string) 
