@@ -26,6 +26,6 @@ class StudlyCapsNormalizer
     final public static function normalize($value)
     {
         $normalizer = new self();
-        return implode('',array_map(array($normalizer,'normalizeWord'),$normalizer->split($normalizer->purify($value)));
+        return implode('',array_map(array($normalizer,'normalizeWord'),$normalizer->split($normalizer->purify($value))));
     } 
 }

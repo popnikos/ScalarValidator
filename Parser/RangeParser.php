@@ -25,7 +25,7 @@ class RangeParser implements ParserInterface
             ;       # Predefined separator semi-column
             (.+)    # Max to compare with (a number with or without decimal)
             (\[|\]) # Must end with "[" (exclusive) or "]" (inclusive)
-            $/x', $this->getRange(),$rangeInfos) {
+            $/x', $this->getRange(),$rangeInfos)) {
               if (is_numeric($rangeInfos[2]) && is_numeric($rangeInfos[3])) {
                 $info['min'] =floatval($rangeInfos[2]);
                 $info['max'] =floatval($rangeInfos[3]);
